@@ -12,7 +12,7 @@ return (
         <Container>
             <Header>
                 <BackButton onPress={()=>{console.log('nada')}}/>
-
+                
             </Header>
         </Container>
     );
