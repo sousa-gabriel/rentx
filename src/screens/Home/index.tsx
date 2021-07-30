@@ -3,6 +3,7 @@ import { StatusBar } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 import Logo from '../../assets/logo.svg';
+import { Car } from '../../components/Car';
 
 import {
     Container,
@@ -12,6 +13,17 @@ import {
 } from './styles';
 
 export function Home() {
+    const carData={
+        brand: 'volkswagen',
+        name: 'Gol G5',
+        rent:{
+            period: 'ao dia',
+            price: 100,
+        },
+        thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNt7HCySqNLEj5dp_eKAo4rzuY2NBPLh2oitlqTOxjfapFgjm1s6KMpc04aLBBkeFfbow&usqp=CAU',
+    }
+
+
     return (
         <Container>
             <StatusBar
@@ -30,6 +42,7 @@ export function Home() {
                     </TotalCars>
                 </HeaderContent>
             </Header>
+            <Car data={carData}/>
         </Container>
     );
 }
